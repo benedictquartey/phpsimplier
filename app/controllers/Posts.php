@@ -1,10 +1,10 @@
 <?php 
-class Pages extends Controller{
+class Posts extends Controller{
     public function __construct(){
        
     }
     public function index(){
-        $this->view('pages/index');
+        $this->view('posts/index');
     }
         
    
