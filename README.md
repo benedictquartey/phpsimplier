@@ -28,7 +28,6 @@
     define("DB_USER", 'YOUR USERNAME TO DATABASE');
     define("DB_PASS", 'YOUR PASSWORD TO DATABASE');
     define("DB_NAME", 'YOUR DATABASE NAME');
-
   ```
 3. Rename URLROOT and SITE NAME
     ```
