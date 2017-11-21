@@ -13,7 +13,6 @@ A PHP Framework for building web application.
   APPROOT  : Helps to include other php files in our pages.
   <?php require APPROOT. '/views/inc/header.php';?>
   
-
 # How to Use  PHPSimplier
 1. Rename RewriteBase in public/.htacccess 
     if the folder that contains this framework files is named goodApp then the RewriteBase will be /goodApp/public 
