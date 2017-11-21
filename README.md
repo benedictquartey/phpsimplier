@@ -1,5 +1,5 @@
 # PHPSimplier
-A PHP Framework for building web application. 
+    A PHP Framework for building web application. 
 
 # Structure
     app folder - is where the whole framework files are created 
@@ -7,11 +7,15 @@ A PHP Framework for building web application.
 
 # Important Constants 
   URLROOT  : helps to create anchors links, show images, link in CSS or Javascript.
-  <script src="<?php echo URLROOT;?>/js/main.js"></script>
+  ```
+    <script src="<?php echo URLROOT;?>/js/main.js"></script>
+  ```
 
 
   APPROOT  : Helps to include other php files in our pages.
-  <?php require APPROOT. '/views/inc/header.php';?>
+  ```
+   <?php require APPROOT. '/views/inc/header.php';?>
+   ```
   
 # How to Use  PHPSimplier
 1. Rename RewriteBase in public/.htacccess 
@@ -19,13 +23,17 @@ A PHP Framework for building web application.
     if your are putting this in a server without any folder to contain the files then it should just be /public
 
 2. Rename Database info in the config/config,php to suit the information about your database
+    ```
     define("DB_HOST", 'YOUR SERVER HOST');
     define("DB_USER", 'YOUR USERNAME TO DATABASE');
     define("DB_PASS", 'YOUR PASSWORD TO DATABASE');
     define("DB_NAME", 'YOUR DATABASE NAME');
 
+  ```
 3. Rename URLROOT and SITE NAME
-    define("URLROOT", "YOUR BASE URL");
+    ```
+     define("URLROOT", "YOUR BASE URL");
+    ```
      if you have a folder to hold the framework files then the base url will be http://hostname/folder such as 
      http://localhost/goodApp.
      if you are just hosting on your domain without creating any folder to hold the files then http://domainName
@@ -41,6 +49,7 @@ A PHP Framework for building web application.
         c) single = returns a single object from the query
         d) rowCount = returns the number of rows affected by a query
     Example. 
+    ```
     class Post{
         private $db
         public function __construct(){
@@ -52,8 +61,10 @@ A PHP Framework for building web application.
             $this->db->resultSet();
         }
     }
+    ```
 5. Creating  Controllers 
     Controller brings together a model and and a view. The controller extends to a base controller called Controler which makes it easier to use its methods to work with views and models.
+   ```
     <?php 
     class Posts extends Controller{
         public function __construct(){
@@ -69,17 +80,19 @@ A PHP Framework for building web application.
             $this->view('pages/index', $post);
         }
     }
+    ```
 6. Working with Views. 
     With the views, I have a created inc folder that holds all header and footer contents for your pages. You can choose to use it.
 
     Example  showing how to use data from our controller in our view.
+    ```
     <?php require APPROOT. '/views/inc/header.php';?>
     <h1><?php echo $data['title']; ?></h1>
     <?php foreach($data['posts'] as $post: ?></h1>
         <li><h1><?php echo $post->DaTabase Table Name; ?></h1></li>
     <?php endforeach; ?>    
     <?php require APPROOT. '/views/inc/footer.php';?>
-
+    ```
     
 
 
